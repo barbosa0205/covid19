@@ -1,0 +1,30 @@
+.data-element {
+    width: 95%;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    & > .text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > p {
+            font-size: 2.5rem;
+            color: #2e2e2e;
+        }
+
+        & > i {
+            font-size: 2.7rem;
+            color: #131313b9;
+        }
+    }
+    & > span {
+        margin-left: 2rem;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        background: #141414d5;
+        color: #ffffff;
+        border-radius: 0.4rem;
+    }
+}

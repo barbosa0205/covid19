@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 5rem;
+    background: #fdfdfd;
+
+    & > h1 {
+        width: 100%;
+        text-align: center;
+        color: #fa8888;
+        font-size: 5rem;
+        text-shadow: 3px 0px 0 #fa8888, -5px 1px 0 #1a1919c7;
+    }
+
+    & > img {
+        width: 95%;
+        max-width: 50rem;
+    }
+
+    & > h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #202020;
+    }
+
+    .link-countries {
+        padding: 1.4rem 1.8rem;
+        background: #202020f1;
+        border-radius: 0.4rem;
+        color: #fdfdfd;
+        text-decoration: none;
+        margin-top: 1rem;
+    }
+}

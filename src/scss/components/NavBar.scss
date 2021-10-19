@@ -1,0 +1,126 @@
+.nav-movil {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 5rem;
+    z-index: 99;
+
+    @media (min-width: 600px) {
+        visibility: hidden;
+    }
+
+    & > .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.7rem;
+        margin: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+        background: #6d6d6d70;
+        width: 4.5rem;
+        height: 3.5rem;
+        border-radius: 0.3rem;
+        backdrop-filter: blur(2px);
+        color: #fdfdfd;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #fdfdfd;
+
+    z-index: 999;
+
+    & .close-container {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-end;
+
+        & .close {
+            padding: 1rem;
+            font-size: 3rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+
+    .links-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7rem;
+        & > .link {
+            border-bottom: 2px solid #20202070;
+            text-align: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            width: 100%;
+            max-width: 500px;
+            padding: 1.5rem 0;
+            color: #202020;
+
+            &:first-child {
+                border-top: 2px solid #20202070;
+            }
+        }
+    }
+}
+
+.aside-open {
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.aside-close {
+    top: 0;
+    left: -150vh;
+    transition: 0.3s ease-in-out;
+}
+@media (min-width: 600px) {
+    .sidebar {
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        min-height: 5rem;
+        margin: 0;
+        padding: 0;
+
+        .close-container {
+            display: none;
+        }
+
+        .links-container {
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+
+            .link {
+                width: auto;
+                padding: 0;
+                margin: 0;
+                margin: 1rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.4rem;
+                border: none;
+                color: #ffff;
+                font-weight: 500;
+                background: #1b1b1b5d;
+
+                &:first-child {
+                    border-top: none;
+                }
+            }
+        }
+    }
+}

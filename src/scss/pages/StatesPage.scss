@@ -1,0 +1,10 @@
+.statesPage-container {
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 5rem;
+
+    & > h1 {
+        text-align: center;
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,64 @@
+.country-container {
+    width: 100%;
+    min-height: 100vh;
+    background: #fdfdfd;
+
+    .tables-container {
+        padding-bottom: 2rem;
+    }
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    background: #ececec;
+
+    @media (min-width: 600px) {
+        height: 35rem;
+    }
+    @media (min-width: 1024px) {
+        height: 50rem;
+    }
+
+    & > picture {
+        & > .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    & > .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: -8.2rem;
+        left: 0;
+
+        & > .box-img {
+            width: 95px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #33333323;
+            backdrop-filter: blur(4px);
+            border-radius: 0.6rem;
+        }
+
+        & > p {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        & > .continent {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #b8b8b8;
+        }
+    }
+}
