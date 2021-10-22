@@ -1,5 +1,6 @@
 .data-element {
     width: 95%;
+    min-width: 320px;
     padding: 1rem 1rem;
     display: flex;
     align-items: center;
@@ -7,7 +8,6 @@
     margin: 0 auto;
     & > .text-container {
         display: flex;
-        align-items: center;
         justify-content: center;
         & > p {
             font-size: 2.5rem;
@@ -18,6 +18,16 @@
             font-size: 2.7rem;
             color: #131313b9;
         }
+
+        @media (max-width: 339px) {
+            & > p {
+                font-size: 2rem;
+            }
+
+            & > i {
+                font-size: 1.8rem;
+            }
+        }
     }
     & > span {
         margin-left: 2rem;
@@ -26,5 +36,8 @@
         background: #141414d5;
         color: #ffffff;
         border-radius: 0.4rem;
+        @media (max-width: 339px) {
+            font-size: 1.6rem;
+        }
     }
 }

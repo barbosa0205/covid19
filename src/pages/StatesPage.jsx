@@ -34,8 +34,8 @@ export const StatesPage = () => {
                     <TableStates states={statesData} countryName={country} />
                 </div>
             ) : (
-                <div>
-                    <h1>LOADING</h1>
+                <div className="statesPage-container">
+                    <h1>LOADING...</h1>
                 </div>
             )}
         </>

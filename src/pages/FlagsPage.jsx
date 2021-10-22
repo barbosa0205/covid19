@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useHistory } from 'react-router'
+import { Search } from '../components/Search'
 import { countryContext } from '../context/countryContext/CountryContext'
 import '../scss/pages/FlagsPage.scss'
 
@@ -7,6 +8,7 @@ export const FlagsPage = () => {
     const CountryCtx = useContext(countryContext)
     const [country, setCountry] = useState([])
     const [loading, setLoading] = useState(false)
+    const [searchValue, setSearchValue] = useState('')
     let history = useHistory()
     useEffect(() => {
         const array = []
@@ -43,10 +45,22 @@ export const FlagsPage = () => {
         fetchAllCountrys()
     }, [])
 
+    let searchedFlags = []
+
+    if (!searchValue.length >= 1) {
+        searchedFlags = country
+    } else {
+        searchedFlags = country.filter(flag => {
+            const flagTitle = flag.title.toLowerCase()
+            const inputText = searchValue.toLowerCase()
+            return flagTitle.includes(inputText)
+        })
+    }
+
     return (
         <div className={`flags-container`}>
             <h1>All countrys</h1>
-
+            <Search searchValue={searchValue} setSearchValue={setSearchValue} />
             <div className="grid-container">
                 {loading ? (
                     <>
@@ -62,7 +76,7 @@ export const FlagsPage = () => {
                     </>
                 ) : (
                     <>
-                        {country.map(({ flag, title }, index) => (
+                        {searchedFlags.map(({ flag, title }, index) => (
                             <div
                                 className="image-container"
                                 key={index}
