@@ -49,6 +49,10 @@
             background: #33333323;
             backdrop-filter: blur(4px);
             border-radius: 0.6rem;
+            & > img {
+                width: 64px;
+                height: 64px;
+            }
         }
 
         & > p {

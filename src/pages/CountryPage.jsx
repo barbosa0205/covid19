@@ -57,7 +57,7 @@ export const CountryPage = () => {
         historyConfirmed()
         historyDeaths()
     }, [history])
-
+    npm
     return (
         <>
             {countryData ? (
@@ -65,7 +65,7 @@ export const CountryPage = () => {
                     <div className="background-image">
                         <picture>
                             <source
-                                srcSet={`https://source.unsplash.com/1024x1024/?${countryData.country}%20wallpaper`}
+                                srcSet={`https://flagcdn.com/w160/${countryData.country}.png`}
                                 media="(min-width: 1024px)"
                                 type="image/png"
                             />
