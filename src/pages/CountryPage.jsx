@@ -57,7 +57,7 @@ export const CountryPage = () => {
         historyConfirmed()
         historyDeaths()
     }, [history])
-    npm
+
     return (
         <>
             {countryData ? (
@@ -65,7 +65,7 @@ export const CountryPage = () => {
                     <div className="background-image">
                         <picture>
                             <source
-                                srcSet={`https://flagcdn.com/w160/${countryData.country}.png`}
+                                srcSet={`https://source.unsplash.com/600x600/?${countryData.country}%20wallpaper`}
                                 media="(min-width: 1024px)"
                                 type="image/png"
                             />
@@ -84,7 +84,7 @@ export const CountryPage = () => {
                         <div className="image-container">
                             <div className="box-img">
                                 <img
-                                    src={`https://www.countryflags.io/${countryData.abbreviation}/flat/64.png`}
+                                    src={`https://flagcdn.com/${countryData.abbreviation.toLowerCase()}.svg`}
                                     alt={`${countryData.country} flag`}
                                 />
                             </div>

@@ -86,7 +86,8 @@ export const FlagsPage = () => {
                                 }}
                             >
                                 <img
-                                    src={`https://www.countryflags.io/${flag}/flat/64.png`}
+                                    src={`https://flagcdn.com/${flag.toLowerCase()}.svg`}
+                                    width="64"
                                     alt={flag}
                                 />
                                 <p>{title}</p>
